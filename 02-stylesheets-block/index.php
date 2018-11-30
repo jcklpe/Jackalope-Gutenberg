@@ -8,7 +8,7 @@ add_action('enqueue_block_editor_assets', 'block02editor_scripts');
 function block02editor_scripts() {
     wp_enqueue_script (
         //name of script
-        'block02editor',
+        'block02editor-scripts',
         // full URL of script
         plugins_url('block.build.js', __FILE__),
         // dependencies this script needs
@@ -17,7 +17,7 @@ function block02editor_scripts() {
         filemtime(plugin_dir_path(__FILE__) . 'block.build.js')
     );
     wp_enqueue_style (
-        'block02editorstyles',
+        'block02editor-styles',
         // full URL of script
         plugins_url('editor.css', __FILE__),
         // dependencies this script needs
@@ -33,7 +33,7 @@ add_action('enqueue_block_assets', 'block02frontend_styles');
 function block02frontend_styles() {
     wp_enqueue_style (
         //name of styles
-        'block02frontend_styles',
+        'block02frontend-styles',
         // full URL of script
         plugins_url('style.css', __FILE__),
         // dependencies this script needs
