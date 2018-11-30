@@ -2,10 +2,9 @@
 defined('ABSPATH') || exit;
 
 // add action enqueue block assets
-
 add_action('enqueue_block_editor_assets', 'enqueue_block_scripts');
 
-// plugin-name_block-name_function-name
+// enqueue the scripts for the block
 function enqueue_block_scripts() {
     wp_enqueue_script (
         //name of script
