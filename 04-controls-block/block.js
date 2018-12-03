@@ -16,7 +16,7 @@ registerBlockType('block-examples/block04', {
 			type: 'string'
 		}
 	},
-	edit: ({ className, attributes: { content, alignment } }) =>
+	edit: ({ className, attributes: { content, alignment }, setAttributes }) =>
 	{
 		const onChangeContent = content =>
 		{
@@ -29,12 +29,12 @@ registerBlockType('block-examples/block04', {
 		};
 
 		return [
-			<BlockControl>
+			<BlockControls>
 				<AlignmentToolbar
 					value={alignment}
 					onChange={onChangeAlignment}
 				/>
-			</BlockControl>,
+			</BlockControls>,
 
 			<RichText
 				tagName="h1"
@@ -50,7 +50,7 @@ registerBlockType('block-examples/block04', {
 	{
 		return (
 			<RichText.Content
-				tagName="p"
+				tagName="h1"
 				className={className}
 				value={content}
 				style={{ textAlign: alignment }}
