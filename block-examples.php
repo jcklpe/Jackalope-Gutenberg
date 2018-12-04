@@ -15,3 +15,4 @@
  include '02-stylesheets-block/index.php';
  include '03-edit-block/index.php';
  include '04-controls-block/index.php';
+ include '05-media-block/index.php';
